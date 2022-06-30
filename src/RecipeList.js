@@ -29,7 +29,7 @@ return (
 
   {recipes.map((recipe, index) => {
     return (
-    <tbody key={index}>
+    <tbody className={index % 2 === 0 ? 'yellow-background' : 'null'} key={index}>
       <tr>
         <td>{recipe.name}</td>
         <td>{recipe.cuisine}</td>
