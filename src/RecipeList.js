@@ -1,4 +1,6 @@
 import React from "react";
+import Recipes from "./Recipes"
+import "./RecipeList.css";
 
 function RecipeList({ recipes }) {
 
