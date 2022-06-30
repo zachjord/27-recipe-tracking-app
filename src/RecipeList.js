@@ -5,6 +5,12 @@ function RecipeList({ recipes }) {
   // TODO: Display the list of recipes using the structure of table that is provided.
   // TODO: Create at least one additional component that is used by this component.
 
+  const handleDelete = (event) => {
+      event.preventDefault();
+      //addPosts(data);
+      //setData({ ...initialFormState })
+    };
+
 return (
   <div className="recipe-list" onSubmit={handleDelete}>
     <table>
