@@ -9,14 +9,21 @@ function App() {
   const addRecipe = (data) => {
     setRecipes([...recipes, data]);
   }
-
-  // TODO: Add the ability for the <RecipeList /> component to list and delete an existing recipe.
-  // TODO: Add the ability for the <RecipeCreate /> component to create new recipes.
+  const handleDelete = (event) => {
+    const index = event.target.id;
+    const newRecipies = [];
+    for (let recipe in recipes) {
+      if (recipe !== index) {
+        newRecipies.push(recipes[recipe]);
+      }
+    }
+    setRecipes(newRecipies);
+  }
 
   return (
     <div className="App">
       <header><h1>Delicious Food Recipes</h1></header>
-      <RecipeList recipes={recipes} />
+      <RecipeList recipes={recipes} handleDelete={handleDelete} />
       <RecipeCreate addRecipe={addRecipe} />
     </div>
   );
