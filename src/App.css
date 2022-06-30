@@ -63,7 +63,7 @@ table {
   text-overflow: ellipsis;
 }
 
-.yellow-background {
+tbody:nth-child(odd) {
   background-color: #ffeec9;
 }
 
