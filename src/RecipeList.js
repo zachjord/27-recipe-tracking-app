@@ -1,20 +1,11 @@
 import React from "react";
-import Recipes from "./Recipes"
+import Recipe from "./Recipe"
 import "./RecipeList.css";
 
-function RecipeList({ recipes }) {
-
-  // TODO: Display the list of recipes using the structure of table that is provided.
-  // TODO: Create at least one additional component that is used by this component.
-
-  const handleDelete = (event) => {
-      event.preventDefault();
-      //addPosts(data);
-      //setData({ ...initialFormState })
-    };
+function RecipeList({ recipes, handleDelete }) {
 
 return (
-  <div className="recipe-list" onSubmit={handleDelete}>
+  <div className="recipe-list">
     <table>
       <thead>
         <tr>
@@ -29,19 +20,16 @@ return (
 
   {recipes.map((recipe, index) => {
     return (
-    <tbody className={index % 2 === 0 ? 'yellow-background' : 'null'} key={index}>
-      <tr>
-        <td>{recipe.name}</td>
-        <td>{recipe.cuisine}</td>
-        <td><img src={recipe.photo} alt="placeholder" /></td>
-        <td>{recipe.ingredients}</td>
-        <td>{recipe.preparation}</td>
-        <td><button name="delete">Delete</button></td>
-      </tr>
-    </tbody>
+        <Recipe name={recipe.name}
+                 cuisine={recipe.cuisine}
+                 photo={recipe.photo}
+                 ingredients={recipe.ingredients}
+                 preparation={recipe.preparation}
+                 index={index}
+                 handleDelete={handleDelete}
+                 />
     );
   })}
-
   </table>
 </div>
 );
