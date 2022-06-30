@@ -61,6 +61,10 @@ table {
   text-overflow: ellipsis;
 }
 
+.yellow-background {
+  background-color: #ffeec9;
+}
+
 /* Column Size for thead */
 
 
