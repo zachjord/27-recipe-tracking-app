@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 function Recipe({ name, cuisine, photo, ingredients, preparation, index, handleDelete }) {
 
