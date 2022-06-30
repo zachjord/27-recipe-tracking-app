@@ -6,6 +6,13 @@ function RecipeCreate() {
   // TODO: Add the required input and textarea form elements.
   // TODO: Add the required submit and change handlers
 
+  const handleSubmit = (event) => {
+      event.preventDefault();
+      //addPosts(data);
+      //setData({ ...initialFormState })
+    };
+
+
   return (
     <form name="create" onSubmit={handleSubmit}>
       <table>
