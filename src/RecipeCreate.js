@@ -22,9 +22,9 @@ function RecipeCreate({ addRecipe }) {
   const handleSubmit = (event) => {
       event.preventDefault();
       //if no url provide, use a placeholder photo
-      if (data.photo === "") {
+      /*if (data.photo === "") {
         data.photo = "./noimg.jpg"
-      }
+      }*/
       addRecipe(data);
       setData({ ...initialFormState })
     };
