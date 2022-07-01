@@ -35,19 +35,19 @@ function RecipeCreate({ addRecipe }) {
         <tbody className="yellow-background">
           <tr>
             <td>
-            <input id="name" name="name" size="18" placeholder="Name" value={data.name} onChange={handleChange} />
+            <input id="name" name="name" size="18" placeholder="Name" value={data.name} onChange={handleChange} required />
             </td>
             <td>
-            <input id="cuisine" name="cuisine" size="18" placeholder="Cuisine" value={data.cuisine} onChange={handleChange} />
+            <input id="cuisine" name="cuisine" size="18" placeholder="Cuisine" value={data.cuisine} onChange={handleChange} required />
             </td>
             <td>
-            <input id="photo" name="photo" size="18" type="url" placeholder="URL" value={data.photo} onChange={handleChange} />
+            <input id="photo" name="photo" size="18" type="url" placeholder="URL" value={data.photo} onChange={handleChange} required />
             </td>
             <td>
-            <textarea id="ingredients" name="ingredients" size="18" placeholder="Ingredients" value={data.ingredients} onChange={handleChange} />
+            <textarea id="ingredients" name="ingredients" size="18" placeholder="Ingredients" value={data.ingredients} onChange={handleChange} required />
             </td>
             <td>
-            <textarea id="preparation" name="preparation" size="18" placeholder="Preparation" value={data.preparation} onChange={handleChange} />
+            <textarea id="preparation" name="preparation" size="18" placeholder="Preparation" value={data.preparation} onChange={handleChange} required />
             </td>
             <td>
               <button type="submit">Create</button>
